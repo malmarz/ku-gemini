@@ -8,9 +8,14 @@ window.KU_FORMS = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Arabic pages open the form's Arabic responder view (MS Forms Multilingual).
+  var pageIsAr = (document.documentElement.lang || "").indexOf("ar") === 0;
   document.querySelectorAll("[data-form]").forEach(function (el) {
     var url = window.KU_FORMS[el.getAttribute("data-form")];
     if (url && url !== "#") {
+      if (pageIsAr) {
+        url += (url.indexOf("?") === -1 ? "?" : "&") + "lang=ar-SA";
+      }
       el.href = url;
       el.target = "_blank";
       el.rel = "noopener";

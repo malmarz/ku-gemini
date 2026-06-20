@@ -321,6 +321,45 @@ a:hover {
   margin-top: 12px;
 }
 
+/* ---------- Role expectation cards (Champion / Facilitator) ---------- */
+.roles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 32px 0;
+}
+.role-card {
+  background: #fff;
+  border: 1px solid var(--ku-border);
+  border-inline-start: 4px solid var(--ku-sky);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+}
+.role-card .rc-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.role-card h4 {
+  color: var(--ku-navy);
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.role-card .rc-tag {
+  color: var(--ku-muted);
+  font-weight: 400;
+  font-size: 14px;
+}
+.role-card ul {
+  margin: 0;
+  padding-inline-start: 20px;
+  color: var(--ku-text);
+}
+.role-card li {
+  margin-bottom: 6px;
+  font-size: 14.5px;
+}
+
 /* ---------- CTA ---------- */
 .cta-band {
   background: linear-gradient(120deg, var(--ku-navy), #2b3563);
@@ -406,7 +445,8 @@ footer .partners {
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .cards,
-  .benefits {
+  .benefits,
+  .roles {
     grid-template-columns: 1fr;
   }
   .hero {
