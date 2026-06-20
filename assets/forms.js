@@ -2,9 +2,9 @@
    forms are created in the KU O365 tenant — every CTA button across all pages
    reads from here via the data-form attribute. */
 window.KU_FORMS = {
-  faculty: "#",
-  students: "#",
-  employees: "#",
+  faculty: "https://forms.office.com/r/jT4uRqy1jc",
+  students: "https://forms.office.com/r/77nQqkVevU",
+  employees: "https://forms.office.com/r/xW5MkPuzN0",
 };
 
 document.addEventListener("DOMContentLoaded", function () {
