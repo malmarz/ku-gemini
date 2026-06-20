@@ -20,4 +20,29 @@ document.addEventListener("DOMContentLoaded", function () {
       el.title = "Sign-up form coming soon";
     }
   });
+
+  // Inject the partner-logos strip into the footer of every page.
+  // Drop official Google Cloud / Deloitte SVGs into the same asset filenames to swap.
+  var footer = document.querySelector("footer");
+  if (footer && !footer.querySelector(".partner-logos")) {
+    var isAr = (document.documentElement.lang || "").indexOf("ar") === 0;
+    // Derive the assets/ base from the already-loaded stylesheet href.
+    var sheet = document.querySelector('link[rel="stylesheet"]');
+    var base = sheet
+      ? sheet.getAttribute("href").replace(/style\.css$/, "")
+      : "assets/";
+    var strip = document.createElement("div");
+    strip.className = "partner-logos";
+    strip.innerHTML =
+      '<span class="pl-label">' +
+      (isAr ? "بالشراكة مع" : "In partnership with") +
+      "</span>" +
+      '<img src="' +
+      base +
+      'logo-google-cloud.svg" alt="Google Cloud">' +
+      '<img src="' +
+      base +
+      'logo-deloitte.svg" alt="Deloitte">';
+    footer.parentNode.insertBefore(strip, footer);
+  }
 });

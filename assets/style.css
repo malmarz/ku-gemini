@@ -368,6 +368,27 @@ a:hover {
   font-size: 15px;
 }
 
+/* ---------- Partners strip ---------- */
+.partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  padding: 22px 0;
+  margin-top: 40px;
+  border-top: 1px solid var(--ku-border);
+}
+.partner-logos .pl-label {
+  color: var(--ku-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+.partner-logos img {
+  height: 26px;
+  width: auto;
+  opacity: 0.92;
+}
+
 /* ---------- Footer ---------- */
 footer {
   border-top: 1px solid var(--ku-border);
