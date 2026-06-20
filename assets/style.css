@@ -363,6 +363,32 @@ a:hover {
   font-size: 14.5px;
 }
 
+/* ---------- Workshop notice ---------- */
+.workshop-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff8da;
+  border: 1px solid var(--ku-gold);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 28px 0;
+}
+.workshop-note .wn-icon {
+  font-size: 22px;
+  line-height: 1.4;
+}
+.workshop-note h4 {
+  margin: 0 0 4px;
+  color: var(--ku-navy);
+  font-size: 16px;
+}
+.workshop-note p {
+  margin: 0;
+  color: var(--ku-text);
+  font-size: 14.5px;
+}
+
 /* ---------- CTA ---------- */
 .cta-band {
   background: linear-gradient(120deg, var(--ku-navy), #2b3563);
